@@ -1,0 +1,8 @@
+[
+  {
+    "id": "OCLEditor",
+    "title": "OCLEditor",
+    "panel": "panels/OCLEditor/OCLEditorPanel",
+    "DEBUG_ONLY": false
+  }
+]

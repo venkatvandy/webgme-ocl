@@ -1,0 +1,278 @@
+        function FCO() {
+
+        };
+
+        function Language() {
+
+                this.children=[];
+
+        };
+
+        function UMLStateDiagram() {
+
+        };
+
+        function End() {
+
+        };
+
+        function Initial() {
+
+        };
+
+        function State() {
+
+        };
+
+        function Transition() {
+
+        };
+
+        function StateBase() {
+
+        };
+
+        function Documentation() {
+
+        };
+		
+	var _1 = new FCO();
+	_1.name = FCO;
+	 
+	var _1319592604 = new UMLStateDiagram();
+	_1319592604.name = SimpleMachine;
+	
+		
+			_1319592604.children.push(_1319592604_353482612);
+		
+			_1319592604.children.push(_1319592604_484262466);
+		
+			_1319592604.children.push(_1319592604_524989402);
+		
+			_1319592604.children.push(_1319592604_622990788);
+		
+			_1319592604.children.push(_1319592604_785608684);
+		
+			_1319592604.children.push(_1319592604_1238370714);
+		
+			_1319592604.children.push(_1319592604_1364444264);
+		
+			_1319592604.children.push(_1319592604_1784105995);
+		
+			_1319592604.children.push(_1319592604_2090816916);
+		 
+	var _1319592604_1238370714 = new Transition();
+	_1319592604_1238370714.name = Transition;
+	 
+		_1319592604_1238370714.src = /1319592604/524989402;
+		_1319592604_1238370714.dst = /1319592604/1784105995;
+		_1319592604_1238370714.event = 12;
+	 
+	var _1319592604_1364444264 = new End();
+	_1319592604_1364444264.name = End;
+	 
+	var _1319592604_1784105995 = new State();
+	_1319592604_1784105995.name = State2;
+	 
+	var _1319592604_2090816916 = new Initial();
+	_1319592604_2090816916.name = Initial;
+	 
+	var _1319592604_353482612 = new Transition();
+	_1319592604_353482612.name = Transition;
+	 
+		_1319592604_353482612.src = /1319592604/524989402;
+		_1319592604_353482612.dst = /1319592604/484262466;
+		_1319592604_353482612.event = 13;
+	 
+	var _1319592604_484262466 = new End();
+	_1319592604_484262466.name = End;
+	 
+	var _1319592604_524989402 = new State();
+	_1319592604_524989402.name = State1;
+	
+		_1319592604_524989402.children=[];
+		
+			_1319592604_524989402.children.push(_1319592604_524989402_w);
+		 
+	var _1319592604_524989402_w = new Documentation();
+	_1319592604_524989402_w.name = Documentation;
+	 
+	var _1319592604_622990788 = new Transition();
+	_1319592604_622990788.name = Transition;
+	 
+		_1319592604_622990788.src = /1319592604/2090816916;
+		_1319592604_622990788.dst = /1319592604/524989402;
+		_1319592604_622990788.event = 01;
+	 
+	var _1319592604_785608684 = new Transition();
+	_1319592604_785608684.name = Transition;
+	 
+		_1319592604_785608684.src = /1319592604/1784105995;
+		_1319592604_785608684.dst = /1319592604/1364444264;
+		_1319592604_785608684.event = 24;
+	 
+	var _615025579 = new Language();
+	_615025579.name = Language;
+	
+		_615025579.children=[];
+		
+			_615025579.children.push(_615025579_318746662);
+		
+			_615025579.children.push(_615025579_909339777);
+		
+			_615025579.children.push(_615025579_1077978197);
+		
+			_615025579.children.push(_615025579_1178174363);
+		
+			_615025579.children.push(_615025579_1242097160);
+		
+			_615025579.children.push(_615025579_1416392928);
+		
+			_615025579.children.push(_615025579_i);
+		 
+	var _615025579_1077978197 = new UMLStateDiagram();
+	_615025579_1077978197.name = UMLStateDiagram;
+	 
+	var _615025579_1178174363 = new End();
+	_615025579_1178174363.name = End;
+	 
+	var _615025579_1242097160 = new Initial();
+	_615025579_1242097160.name = Initial;
+	 
+	var _615025579_1416392928 = new State();
+	_615025579_1416392928.name = State;
+	 
+	var _615025579_318746662 = new Transition();
+	_615025579_318746662.name = Transition;
+	 
+		_615025579_318746662.src = null;
+		_615025579_318746662.dst = null;
+		_615025579_318746662.event = switch;
+	 
+	var _615025579_909339777 = new StateBase();
+	_615025579_909339777.name = StateBase;
+	 
+	var _615025579_i = new Documentation();
+	_615025579_i.name = Documentation;
+	 
+	var _903349001 = new UMLStateDiagram();
+	_903349001.name = MinimalMachine;
+	
+		_903349001.children=[];
+		
+			_903349001.children.push(_903349001_484262466);
+		
+			_903349001.children.push(_903349001_524989402);
+		
+			_903349001.children.push(_903349001_622990788);
+		
+			_903349001.children.push(_903349001_2090816916);
+		 
+	var _903349001_2090816916 = new Initial();
+	_903349001_2090816916.name = Initial;
+	 
+	var _903349001_484262466 = new End();
+	_903349001_484262466.name = End;
+	 
+	var _903349001_524989402 = new State();
+	_903349001_524989402.name = State1;
+	 
+	var _903349001_622990788 = new Transition();
+	_903349001_622990788.name = Transition;
+	 
+		_903349001_622990788.src = /903349001/2090816916;
+		_903349001_622990788.dst = /903349001/524989402;
+		_903349001_622990788.event = 01;
+	 
+	var _m = new UMLStateDiagram();
+	_m.name = deployment;
+	
+		_m.children=[];
+		
+			_m.children.push(_m_4);
+		
+			_m.children.push(_m_5);
+		
+			_m.children.push(_m_z);
+		
+			_m.children.push(_m_G);
+		
+			_m.children.push(_m_x);
+		
+			_m.children.push(_m_B);
+		
+			_m.children.push(_m_L);
+		
+			_m.children.push(_m_E);
+		
+			_m.children.push(_m_l);
+		
+			_m.children.push(_m_m);
+		
+			_m.children.push(_m_q);
+		
+			_m.children.push(_m_n);
+		 
+	var _m_4 = new State();
+	_m_4.name = Tested;
+	 
+	var _m_5 = new Transition();
+	_m_5.name = Transition;
+	 
+		_m_5.src = /m/B;
+		_m_5.dst = /m/L;
+		_m_5.event = npm install;
+	 
+	var _m_B = new Initial();
+	_m_B.name = Initial;
+	 
+	var _m_E = new Transition();
+	_m_E.name = Transition;
+	 
+		_m_E.src = /m/4;
+		_m_E.dst = /m/x;
+		_m_E.event = notify users;
+	 
+	var _m_G = new Transition();
+	_m_G.name = Transition;
+	 
+		_m_G.src = /m/l;
+		_m_G.dst = /m/z;
+		_m_G.event = revert back;
+	 
+	var _m_L = new State();
+	_m_L.name = instFinished;
+	 
+	var _m_l = new State();
+	_m_l.name = Faliure;
+	 
+	var _m_m = new Transition();
+	_m_m.name = Transition;
+	 
+		_m_m.src = /m/B;
+		_m_m.dst = /m/l;
+		_m_m.event = npm install fails;
+	 
+	var _m_n = new Transition();
+	_m_n.name = Transition;
+	 
+		_m_n.src = /m/L;
+		_m_n.dst = /m/l;
+		_m_n.event = test fails;
+	 
+	var _m_q = new Transition();
+	_m_q.name = Transition;
+	 
+		_m_q.src = /m/L;
+		_m_q.dst = /m/4;
+		_m_q.event = test succeeds;
+	 
+	var _m_x = new End();
+	_m_x.name = End;
+	 
+	var _m_z = new End();
+	_m_z.name = End;
+	 
+	var _t = new Documentation();
+	_t.name = FiniteStateMachine;
+	

@@ -1,0 +1,23 @@
+{
+  "id": "EvalOCL",
+  "name": "EvalOCL",
+  "version": "0.1.0",
+  "description": "",
+  "icon": {
+    "class": "glyphicon glyphicon-cog",
+    "src": ""
+  },
+  "disableServerSideExecution": false,
+  "disableBrowserSideExecution": false,
+  "writeAccessRequired": false,
+  "configStructure": [
+    {
+      "name": "Constraint",
+      "displayName": "Constraints",
+      "description": "Please enter constraint.",
+      "value": "context State inv: self.children->size()=1",
+      "valueType": "string",
+      "readOnly": false
+    }
+  ]
+}

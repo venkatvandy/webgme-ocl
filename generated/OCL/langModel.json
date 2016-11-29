@@ -1,0 +1,79 @@
+{
+    "FCO": {
+        "attributes": [
+            "name"
+        ],
+        "canHavechildren": true,
+        "pointers": [],
+        "sets": []
+    },
+    "Language": {
+        "attributes": [
+            "name"
+        ],
+        "canHavechildren": true,
+        "pointers": [],
+        "sets": []
+    },
+    "UMLStateDiagram": {
+        "attributes": [
+            "name"
+        ],
+        "canHavechildren": true,
+        "pointers": [],
+        "sets": []
+    },
+    "End": {
+        "attributes": [
+            "name"
+        ],
+        "canHavechildren": true,
+        "pointers": [],
+        "sets": []
+    },
+    "Initial": {
+        "attributes": [
+            "name"
+        ],
+        "canHavechildren": true,
+        "pointers": [],
+        "sets": []
+    },
+    "State": {
+        "attributes": [
+            "name"
+        ],
+        "canHavechildren": true,
+        "pointers": [],
+        "sets": []
+    },
+    "Transition": {
+        "attributes": [
+            "name",
+            "event"
+        ],
+        "canHavechildren": true,
+        "pointers": [
+            "src",
+            "dst"
+        ],
+        "sets": []
+    },
+    "StateBase": {
+        "attributes": [
+            "name"
+        ],
+        "canHavechildren": true,
+        "pointers": [],
+        "sets": []
+    },
+    "Documentation": {
+        "attributes": [
+            "name",
+            "documentation"
+        ],
+        "canHavechildren": true,
+        "pointers": [],
+        "sets": []
+    }
+}

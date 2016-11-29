@@ -1,0 +1,13 @@
+<%
+for(var i in langModel){%> 
+	function <%=i%>() {
+	<% if(langModel[i].canHavechildren){ %>
+		this.children=[];
+		<%}%>
+	<% for(var j=0;j<langModel[i].attributes.length;j++){%>
+		this.<%= langModel[i].attributes[j] %> = null; 
+	<%} %>
+		this.pointers = null;
+		this.sets = null;
+	}
+<%}%>

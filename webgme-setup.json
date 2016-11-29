@@ -1,0 +1,45 @@
+{
+  "components": {
+    "plugins": {
+      "TutorialPlugin": {
+        "src": "src/plugins/TutorialPlugin",
+        "test": "test/plugins/TutorialPlugin"
+      },
+      "FSMCodeGenerator": {
+        "src": "src/plugins/FSMCodeGenerator",
+        "test": "test/plugins/FSMCodeGenerator"
+      },
+      "MiniProject2": {
+        "src": "src/plugins/MiniProject2",
+        "test": "test/plugins/MiniProject2"
+      },
+      "OCL": {
+        "src": "src/plugins/OCL",
+        "test": "test/plugins/OCL"
+      },
+      "EvalOCL": {
+        "src": "src/plugins/EvalOCL",
+        "test": "test/plugins/EvalOCL"
+      }
+    },
+    "seeds": {
+      "ERPluginGenerator": {
+        "src": "src/seeds/ERPluginGenerator"
+      }
+    },
+    "visualizers": {
+      "OCLEditor": {
+        "src": "panels/OCLEditor/OCLEditorPanel",
+        "title": "OCLEditor",
+        "panel": "src/visualizers/panels/OCLEditor",
+        "secondary": false,
+        "widget": "src/visualizers/widgets/OCLEditor"
+      }
+    }
+  },
+  "dependencies": {
+    "plugins": {},
+    "seeds": {},
+    "visualizers": {}
+  }
+}

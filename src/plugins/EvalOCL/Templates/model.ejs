@@ -1,0 +1,29 @@
+<%
+function convertName(name){
+    return name.replace(/ /g, "_").replace(/\//g, "_").replace(/\./g, "__");
+}
+for(var i in dataModel){ 
+	if(i=== '') continue;
+	var var_name = convertName(i); %>
+	var <%= var_name%> = new <%= dataModel[i]._type %>();
+	<%
+	for( var k in dataModel[i]){
+		if(!k.startsWith('_')){
+			if(!Array.isArray(dataModel[i][k])){
+				var temp = String(dataModel[i][k]);
+				if(temp.startsWith('/')){
+					temp = convertName(temp); %>
+				<%= var_name%>.<%= k%> = <%= temp%>;
+				<%}
+				else{%>
+					<%= var_name%>.<%= k%> = <%- JSON.stringify(temp) %>;
+				<%}
+			}
+			else{
+				for(var j=0; j<dataModel[i][k].length; j++) {%>
+					<%= var_name%>.<%= k%>.push(<%= convertName(dataModel[i][k][j])%>);
+				<%}
+			}
+		}
+	}
+}%>

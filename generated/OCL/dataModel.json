@@ -1,0 +1,326 @@
+{
+    "": {
+        "name": "FiniteStateMachine",
+        "children": [
+            "/1",
+            "/615025579",
+            "/903349001",
+            "/1319592604",
+            "/m",
+            "/t"
+        ],
+        "_type": "",
+        "_isMeta": ""
+    },
+    "/1": {
+        "name": "FCO",
+        "children": [],
+        "_type": "FCO",
+        "_isMeta": true
+    },
+    "/1319592604": {
+        "name": "SimpleMachine",
+        "children": [
+            "/1319592604/353482612",
+            "/1319592604/484262466",
+            "/1319592604/524989402",
+            "/1319592604/622990788",
+            "/1319592604/785608684",
+            "/1319592604/1238370714",
+            "/1319592604/1364444264",
+            "/1319592604/1784105995",
+            "/1319592604/2090816916"
+        ],
+        "_type": "UMLStateDiagram",
+        "_isMeta": false
+    },
+    "/1319592604/1238370714": {
+        "name": "Transition",
+        "children": [],
+        "_type": "Transition",
+        "_isMeta": false,
+        "event": "12",
+        "src": "/1319592604/524989402",
+        "dst": "/1319592604/1784105995"
+    },
+    "/1319592604/1364444264": {
+        "name": "End",
+        "children": [],
+        "_type": "End",
+        "_isMeta": false
+    },
+    "/1319592604/1784105995": {
+        "name": "State2",
+        "children": [],
+        "_type": "State",
+        "_isMeta": false
+    },
+    "/1319592604/2090816916": {
+        "name": "Initial",
+        "children": [],
+        "_type": "Initial",
+        "_isMeta": false
+    },
+    "/1319592604/353482612": {
+        "name": "Transition",
+        "children": [],
+        "_type": "Transition",
+        "_isMeta": false,
+        "event": "13",
+        "src": "/1319592604/524989402",
+        "dst": "/1319592604/484262466"
+    },
+    "/1319592604/484262466": {
+        "name": "End",
+        "children": [],
+        "_type": "End",
+        "_isMeta": false
+    },
+    "/1319592604/524989402": {
+        "name": "State1",
+        "children": [
+            "/1319592604/524989402/w"
+        ],
+        "_type": "State",
+        "_isMeta": false
+    },
+    "/1319592604/524989402/w": {
+        "name": "Documentation",
+        "children": [],
+        "_type": "Documentation",
+        "_isMeta": false,
+        "documentation": ""
+    },
+    "/1319592604/622990788": {
+        "name": "Transition",
+        "children": [],
+        "_type": "Transition",
+        "_isMeta": false,
+        "event": "01",
+        "src": "/1319592604/2090816916",
+        "dst": "/1319592604/524989402"
+    },
+    "/1319592604/785608684": {
+        "name": "Transition",
+        "children": [],
+        "_type": "Transition",
+        "_isMeta": false,
+        "event": "24",
+        "src": "/1319592604/1784105995",
+        "dst": "/1319592604/1364444264"
+    },
+    "/615025579": {
+        "name": "Language",
+        "children": [
+            "/615025579/318746662",
+            "/615025579/909339777",
+            "/615025579/1077978197",
+            "/615025579/1178174363",
+            "/615025579/1242097160",
+            "/615025579/1416392928",
+            "/615025579/i"
+        ],
+        "_type": "Language",
+        "_isMeta": true
+    },
+    "/615025579/1077978197": {
+        "name": "UMLStateDiagram",
+        "children": [],
+        "_type": "UMLStateDiagram",
+        "_isMeta": true
+    },
+    "/615025579/1178174363": {
+        "name": "End",
+        "children": [],
+        "_type": "End",
+        "_isMeta": true
+    },
+    "/615025579/1242097160": {
+        "name": "Initial",
+        "children": [],
+        "_type": "Initial",
+        "_isMeta": true
+    },
+    "/615025579/1416392928": {
+        "name": "State",
+        "children": [],
+        "_type": "State",
+        "_isMeta": true
+    },
+    "/615025579/318746662": {
+        "name": "Transition",
+        "children": [],
+        "_type": "Transition",
+        "_isMeta": true,
+        "event": "switch",
+        "src": null,
+        "dst": null
+    },
+    "/615025579/909339777": {
+        "name": "StateBase",
+        "children": [],
+        "_type": "StateBase",
+        "_isMeta": true
+    },
+    "/615025579/i": {
+        "name": "Documentation",
+        "children": [],
+        "_type": "Documentation",
+        "_isMeta": true,
+        "documentation": ""
+    },
+    "/903349001": {
+        "name": "MinimalMachine",
+        "children": [
+            "/903349001/484262466",
+            "/903349001/524989402",
+            "/903349001/622990788",
+            "/903349001/2090816916"
+        ],
+        "_type": "UMLStateDiagram",
+        "_isMeta": false
+    },
+    "/903349001/2090816916": {
+        "name": "Initial",
+        "children": [],
+        "_type": "Initial",
+        "_isMeta": false
+    },
+    "/903349001/484262466": {
+        "name": "End",
+        "children": [],
+        "_type": "End",
+        "_isMeta": false
+    },
+    "/903349001/524989402": {
+        "name": "State1",
+        "children": [],
+        "_type": "State",
+        "_isMeta": false
+    },
+    "/903349001/622990788": {
+        "name": "Transition",
+        "children": [],
+        "_type": "Transition",
+        "_isMeta": false,
+        "event": "01",
+        "src": "/903349001/2090816916",
+        "dst": "/903349001/524989402"
+    },
+    "/m": {
+        "name": "deployment",
+        "children": [
+            "/m/4",
+            "/m/5",
+            "/m/z",
+            "/m/G",
+            "/m/x",
+            "/m/B",
+            "/m/L",
+            "/m/E",
+            "/m/l",
+            "/m/m",
+            "/m/q",
+            "/m/n"
+        ],
+        "_type": "UMLStateDiagram",
+        "_isMeta": false
+    },
+    "/m/4": {
+        "name": "Tested",
+        "children": [],
+        "_type": "State",
+        "_isMeta": false
+    },
+    "/m/5": {
+        "name": "Transition",
+        "children": [],
+        "_type": "Transition",
+        "_isMeta": false,
+        "event": "npm install",
+        "src": "/m/B",
+        "dst": "/m/L"
+    },
+    "/m/B": {
+        "name": "Initial",
+        "children": [],
+        "_type": "Initial",
+        "_isMeta": false
+    },
+    "/m/E": {
+        "name": "Transition",
+        "children": [],
+        "_type": "Transition",
+        "_isMeta": false,
+        "event": "notify users",
+        "src": "/m/4",
+        "dst": "/m/x"
+    },
+    "/m/G": {
+        "name": "Transition",
+        "children": [],
+        "_type": "Transition",
+        "_isMeta": false,
+        "event": "revert back",
+        "src": "/m/l",
+        "dst": "/m/z"
+    },
+    "/m/L": {
+        "name": "instFinished",
+        "children": [],
+        "_type": "State",
+        "_isMeta": false
+    },
+    "/m/l": {
+        "name": "Faliure",
+        "children": [],
+        "_type": "State",
+        "_isMeta": false
+    },
+    "/m/m": {
+        "name": "Transition",
+        "children": [],
+        "_type": "Transition",
+        "_isMeta": false,
+        "event": "npm install fails",
+        "src": "/m/B",
+        "dst": "/m/l"
+    },
+    "/m/n": {
+        "name": "Transition",
+        "children": [],
+        "_type": "Transition",
+        "_isMeta": false,
+        "event": "test fails",
+        "src": "/m/L",
+        "dst": "/m/l"
+    },
+    "/m/q": {
+        "name": "Transition",
+        "children": [],
+        "_type": "Transition",
+        "_isMeta": false,
+        "event": "test succeeds",
+        "src": "/m/L",
+        "dst": "/m/4"
+    },
+    "/m/x": {
+        "name": "End",
+        "children": [],
+        "_type": "End",
+        "_isMeta": false
+    },
+    "/m/z": {
+        "name": "End",
+        "children": [],
+        "_type": "End",
+        "_isMeta": false
+    },
+    "/t": {
+        "name": "FiniteStateMachine",
+        "children": [],
+        "_type": "Documentation",
+        "_isMeta": false,
+        "documentation": "### Finite State Machine\n\nThis project contains a meta-model for building  Finite-state machines [(shift + click)](https://en.wikipedia.org/wiki/Finite-state_machine).\n\nThe plugin `FSMCodeGenerator` generates simulation code in various languages:\n\n- C#\n- Python\n- C++\n- JavaScript\n- Ruby\n- Java"
+    }
+}
