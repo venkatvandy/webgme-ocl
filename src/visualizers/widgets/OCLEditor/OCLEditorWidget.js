@@ -40,6 +40,7 @@ define(['js/Utils/ComponentSettings',
         this._title = this._el.find('#ocl_editor_title');
         this.selectedAttribute = null;
         this.selectedNode = null;
+        this._result = this._el.find('#resultarea');
 
         this._evalBtn = this._el.find('#evaluate').first();
         this._saveBtn = this._el.find('#save').first();
@@ -63,6 +64,10 @@ define(['js/Utils/ComponentSettings',
             self.onBackgroundDblClick();
         });
     };
+
+        OCLEditorWidget.prototype.setResults = function (result) {
+            $(this._result).val('Result is:'+result);
+        };
 
         OCLEditorWidget.prototype.onSaving = function(){
             this._logger.error("OnSaving Function should be overridden.");

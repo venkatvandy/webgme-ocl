@@ -56,6 +56,11 @@
             self._client.runServerPlugin('EvalOCL', pluginContext, function (err, pluginResult) {
                 console.log(err, pluginResult);
                 console.log('****Result  is ', pluginResult.messages[0].message);
+
+                if (pluginResult.messages.length > 0) {
+                    self._widget.setResults(pluginResult.messages[0].message);
+                }
+
             });
         };
     };
