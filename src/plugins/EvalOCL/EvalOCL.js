@@ -79,10 +79,12 @@ define([
                 var dataModel = self.makeModelObject(nodes);
                 var dataModelStr = JSON.stringify(dataModel, null, 4);
                 self.dataModel = dataModel;
+                //self.logger.info('************DataModel***********\n',dataModelStr);
 
                 var langModel = self.makeLanguageObject(nodes);
                 var langModelStr = JSON.stringify(langModel, null, 4);
                 self.langModel = langModel;
+                //self.logger.info('************LangModel***********\n',langModelStr);
 
 
                 artifact = self.blobClient.createArtifact('project-data');
@@ -96,6 +98,8 @@ define([
                 var JSCodeModel = ejs.render(modelTemplate, self);
 
                 var JSCode = JSCodeLang+JSCodeModel;
+                //self.logger.info('************Code is***********\n',JSCode);
+
                 eval(JSCode);
 
                 var OclEngine = require('ocl-js').default;
@@ -108,7 +112,7 @@ define([
                 //var result = myEngine.evaluate(_1319592604);
 
                 function convertName(name){
-                    return name.replace(/ /g, "_").replace(/\//g, "_").replace(/\./g, "__");
+                    return name.replace(/ /g, "_").replace(/\//g, "_").replace(/\./g, "__").replace(/-/g,"_");
                 }
 
                 var object_to_be_evaluated = convertName(self.core.getPath(self.activeNode));
@@ -204,6 +208,7 @@ define([
 
         for (path in nodes) {
             node = nodes[path];
+            if(self.core.getAttribute(node, 'name')!="FCO")
             dataModel[self.core.getPath(node)] = self.info_of_model(node,nodes);
         }
         return dataModel;
@@ -223,6 +228,7 @@ define([
             };
 
             values.name = self.core.getAttribute(node, 'name');
+            //self.logger.info("Name is",values.name);
             childrenPaths = self.core.getChildrenPaths(node);
             if(childrenPaths.length>0)
                 values.children= childrenPaths;

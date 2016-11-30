@@ -1,0 +1,13 @@
+FSM
+
+context State inv: self.children->size()=1
+
+
+
+LogicGates
+
+context And inv: self.children->size()=3
+
+context And inv: self.children->select(c|c.name="InputPort")->size = 2
+
+context And inv: self.children->select(c|c.name="OutputPort")->size = 1
