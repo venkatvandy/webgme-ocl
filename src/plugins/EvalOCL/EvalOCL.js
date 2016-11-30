@@ -107,7 +107,13 @@ define([
 
                 //var result = myEngine.evaluate(_1319592604);
 
-                var result = myEngine.evaluate(_1319592604_524989402);
+                function convertName(name){
+                    return name.replace(/ /g, "_").replace(/\//g, "_").replace(/\./g, "__");
+                }
+
+                var object_to_be_evaluated = convertName(self.core.getPath(self.activeNode));
+
+                var result = eval('myEngine.evaluate('+object_to_be_evaluated+');');
 
                 //console.log('*********Ans is :',result);
 

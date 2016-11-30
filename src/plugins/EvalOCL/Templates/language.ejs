@@ -6,8 +6,14 @@ for(var i in langModel){%>
 		<%}%>
 	<% for(var j=0;j<langModel[i].attributes.length;j++){%>
 		this.<%= langModel[i].attributes[j] %> = null; 
-	<%} %>
-		this.pointers = null;
-		this.sets = null;
+	<% } 
+	
+	for(var j=0;j<langModel[i].pointers.length;j++){%>
+		this.<%= langModel[i].pointers[j] %> = null; 
+	<% }
+	
+	for(var j=0;j<langModel[i].sets.length;j++){%>
+		this.<%= langModel[i].sets[j] %> = []; 
+	<% }%>
 	}
 <%}%>

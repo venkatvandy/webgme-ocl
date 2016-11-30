@@ -36,9 +36,27 @@
     };
 
     OCLEditorControl.prototype._initWidgetEventHandlers = function () {
+        var self=this;
         this._widget.onNodeClick = function (id) {
             // Change the current active object
             WebGMEGlobal.State.registerActiveObject(id);
+        };
+
+        this._widget.onSaving = function (constraint) {
+            self._client.setAttributes(self._currentNodeId, '_constraints', constraint);
+        };
+
+        this._widget.onEvaluate = function (constraint) {
+            var pluginContext = self._client.getCurrentPluginContext('EvalOCL', self._currentNodeId);
+
+            pluginContext.pluginConfig = {
+                Constraint: constraint
+            };
+
+            self._client.runServerPlugin('EvalOCL', pluginContext, function (err, pluginResult) {
+                console.log(err, pluginResult);
+                console.log('****Result  is ', pluginResult.messages[0].message);
+            });
         };
     };
 
@@ -48,19 +66,28 @@
     // (this allows the browser to then only load those relevant parts).
     OCLEditorControl.prototype.selectedObjectChanged = function (nodeId) {
         var desc = this._getObjectDescriptor(nodeId),
+            node,
+            constraint,
             self = this;
 
         self._logger.debug('activeObject nodeId \'' + nodeId + '\'');
 
+        node = this._client.getNode(nodeId);
+        constraint = node.getAttribute('_constraints');
+
+        this._widget.setConstraint(constraint);
+
+        self._currentNodeId = nodeId;
+
         // Remove current territory patterns
-        if (self._currentNodeId) {
+        /*if (self._currentNodeId) {
             self._client.removeUI(self._territoryId);
         }
 
         self._currentNodeId = nodeId;
-        self._currentNodeParentId = undefined;
+        self._currentNodeParentId = undefined;*/
 
-        if (typeof self._currentNodeId === 'string') {
+        /*if (typeof self._currentNodeId === 'string') {
             // Put new node's info into territory rules
             self._selfPatterns = {};
             self._selfPatterns[nodeId] = {children: 0};  // Territory "rule"
@@ -84,7 +111,7 @@
 
             self._selfPatterns[nodeId] = {children: 1};
             self._client.updateTerritory(self._territoryId, self._selfPatterns);
-        }
+        }*/
     };
 
     // This next function retrieves the relevant node information for the widget
