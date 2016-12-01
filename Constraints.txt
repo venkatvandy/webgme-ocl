@@ -7,38 +7,39 @@ context UMLStateDiagram inv: self.children->select(c|c.name="Initial")->size = 1
 context UMLStateDiagram inv: self.children->select(c|c.name="Faliure")->size = 1
 
 
+context Not inv: self.children->select(c|c is instanceof "InputPort")->size = 1
 
-def: let redCars: self.fleet->select(c|c.color="red")
-   inv: self.redCars->size > 0
 
+context Flow inv: self.src.type <> self.dst.type 
 
 LogicGates
 
 context And inv: self.children->size() >= 3
-context And inv: self.children->select(c|c.name="InputPort")->size >= 2
-context And inv: self.children->select(c|c.name="OutputPort")->size = 1
+context And inv: self.children->select(c|c.type="InputPort")->size >= 2
+context And inv: self.children->select(c|c.type="OutputPort")->size = 1
 
 context Not inv: self.children->size() = 2
-context Not inv: self.children->select(c|c.name="InputPort")->size = 1
-context Not inv: self.children->select(c|c.name="OutputPort")->size = 1
+context Not inv: self.children->select(c|c.type="InputPort")->size = 1
+context Not inv: self.children->select(c|c.type="OutputPort")->size = 1
+context Not inv: self.children->select(c|c.oclIsTypeOf(InputPort))->size = 1
 
 context Or inv: self.children->size() >= 3
-context Or inv: self.children->select(c|c.name="InputPort")->size >= 2
-context Or inv: self.children->select(c|c.name="OutputPort")->size = 1
+context Or inv: self.children->select(c|c.type="InputPort")->size >= 2
+context Or inv: self.children->select(c|c.type="OutputPort")->size = 1
 
 context Nand inv: self.children->size() >= 3
-context Nand inv: self.children->select(c|c.name="InputPort")->size >= 2
-context Nand inv: self.children->select(c|c.name="OutputPort")->size = 1
+context Nand inv: self.children->select(c|c.type="InputPort")->size >= 2
+context Nand inv: self.children->select(c|c.type="OutputPort")->size = 1
 
 context Xor inv: self.children->size() >= 3
-context Xor inv: self.children->select(c|c.name="InputPort")->size >= 2
-context Xor inv: self.children->select(c|c.name="OutputPort")->size = 1
+context Xor inv: self.children->select(c|c.type="InputPort")->size >= 2
+context Xor inv: self.children->select(c|c.type="OutputPort")->size = 1
 
 context Buffer inv: self.children->size() = 2
-context Buffer inv: self.children->select(c|c.name="InputPort")->size = 1
-context Buffer inv: self.children->select(c|c.name="OutputPort")->size = 1
+context Buffer inv: self.children->select(c|c.type="InputPort")->size = 1
+context Buffer inv: self.children->select(c|c.type="OutputPort")->size = 1
 
 context Xnor inv: self.children->size() >= 3
-context Xnor inv: self.children->select(c|c.name="InputPort")->size >= 2
-context Xnor inv: self.children->select(c|c.name="OutputPort")->size = 1
+context Xnor inv: self.children->select(c|c.type="InputPort")->size >= 2
+context Xnor inv: self.children->select(c|c.type="OutputPort")->size = 1
 

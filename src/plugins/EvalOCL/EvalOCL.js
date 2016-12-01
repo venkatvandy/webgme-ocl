@@ -98,7 +98,7 @@ define([
                 var JSCodeModel = ejs.render(modelTemplate, self);
 
                 var JSCode = JSCodeLang+JSCodeModel;
-                //self.logger.info('************Code is***********\n',JSCode);
+                self.logger.info('************Code is***********\n',JSCode);
 
                 eval(JSCode);
 
@@ -117,7 +117,15 @@ define([
 
                 var object_to_be_evaluated = convertName(self.core.getPath(self.activeNode));
 
-                var result = eval('myEngine.evaluate('+object_to_be_evaluated+');');
+                var result;
+
+                try{
+                    result = eval('myEngine.evaluate('+object_to_be_evaluated+');');
+                }
+                catch(e) {
+                    console.log("**********error",e);
+                }
+
 
                 //console.log('*********Ans is :',result);
 
