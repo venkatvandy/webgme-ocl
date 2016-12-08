@@ -2,17 +2,18 @@ FSM
 
 context State inv: self.children->size()=1
 
-context UMLStateDiagram inv: self.children->select(c|c.name="Initial")->size = 1
+context UMLStateDiagram inv: self.children->select(c|c.type="Initial")->size = 1
 
-context UMLStateDiagram inv: self.children->select(c|c.name="Faliure")->size = 1
+/*context UMLStateDiagram 
+def : let endstates : self.children->select(c|c.type="End")
+inv : self.endstates.children->size = 0 */
 
+   
+context Transition inv: self.src.type <> "End"
 
-context Not inv: self.children->select(c|c is instanceof "InputPort")->size = 1
-
-
-context Flow inv: self.src.type <> self.dst.type 
-
+------------------- 
 LogicGates
+-------------------
 
 context And inv: self.children->size() >= 3
 context And inv: self.children->select(c|c.type="InputPort")->size >= 2
@@ -43,3 +44,7 @@ context Xnor inv: self.children->size() >= 3
 context Xnor inv: self.children->select(c|c.type="InputPort")->size >= 2
 context Xnor inv: self.children->select(c|c.type="OutputPort")->size = 1
 
+------------------
+SignalFLow
+------------------
+context Flow inv: self.src.type <> self.dst.type

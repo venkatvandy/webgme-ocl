@@ -8,10 +8,10 @@ for(var i=keys.length-1; i>=0;i--){
 	if(keys[i]=== '') continue;
 	var var_name = convertName(keys[i]); %>
 	var <%= var_name%> = new <%= dataModel[keys[i]]._type %>();
+	<%= var_name%>.type ="<%= dataModel[keys[i]]._type%>";
 	<%
 	for( var k in dataModel[keys[i]]){
-		if(!k.startsWith('_')){ %>
-    		<%= var_name%>.type ="<%= dataModel[keys[i]]._type%>"; <%
+		if(!k.startsWith('_')){
 			if(!Array.isArray(dataModel[keys[i]][k])){
 				var temp = String(dataModel[keys[i]][k]);
 				if(temp.startsWith('/')){
